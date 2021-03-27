@@ -56,7 +56,7 @@
                 <nav class="navbar navbar-light bg-light" id= "navbar-full" >
                 <div class="container">
                     <div class="header_navbar"><a class="navbar-brand" href="./../index.html#work">
-                            <h1>CADDISFL<span style="color:#900C3F;">AI</span> </h1>
+                            <h1>Florina Dutt's work </h1>
                         </a>
                     </div>
                     <div class="buttons_portfolio">
@@ -646,7 +646,7 @@
         if (error) console.log('error is ', error)
         pc.get_projname()
 
-        document.title = `CADDISFLAI: ${pc.projname} --- `
+        document.title = `Design Work: ${pc.projname} --- `
 
         let filter_data = data.filter((d) => {
             return d['proj_folder'] == pc.projname
