@@ -56,7 +56,7 @@
                 <nav class="navbar navbar-light bg-light" id= "navbar-full" >
                 <div class="container">
                     <div class="header_navbar"><a class="navbar-brand" href="./../index.html#work">
-                            <h1>Florina Dutt's work </h1>
+                            <h3>Florina Dutts' portfolio </h3>
                         </a>
                     </div>
                     <div class="buttons_portfolio">
