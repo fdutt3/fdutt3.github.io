@@ -1,0 +1,85 @@
+.project_descr{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+.highlighted_text{
+    font-size: 0.99rem;
+    font-weight: 500;
+    border: 1px solid#900C3F;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.highlight_marked{
+    background : #e9ff58 ;
+    color: black;
+}
+
+.highlighted_text_div{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* flex-direction: row-reverse; */
+    
+    font-weight: bolder;
+}
+
+
+
+.buttons_portfolio{
+    /* width: 50px; */
+    display: flex;
+    
+    /* padding: 10px; */
+    /* margin: 10px; */
+}
+
+.icons_a_portfolio{
+    margin-left: 20px;
+    /* width: auto; */
+    /* width: 30px; */
+    /* height: 100px; */
+}
+
+.header_navbar{
+    display: flex;
+}
+
+#navbar-full{
+    height: 65px;
+}
+
+.portfolio_container{
+    margin: 2px;
+}
+
+.img_moving_portfolio{
+    object-fit: contain;
+    max-height: 700px;
+    border-bottom: 1px dashed lightgray;
+
+}
+
+.swiper-slide{
+}
+
+#progress-bar-fill-id{
+    background:#900C3F;
+}
+
+
+.thumbs_suggestions{
+    border-top: 1px dashed gray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.suggestion_header{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
