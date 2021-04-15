@@ -102,7 +102,7 @@
       // categories.push('featured')
 
       let category_list = `<li data-filter="*" class="filter">All</li>`
-      category_list += `<li data-filter=".filter-featured" class="filter-active li-featured">Featured</li>`
+      // category_list += `<li data-filter=".filter-featured" class="filter-active li-featured">Featured</li>`
 
       categories.map((c) => {
         category_list += `<li data-filter=".filter-${c}" class="li-${c}">${c}</li>`
