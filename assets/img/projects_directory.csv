@@ -175,7 +175,7 @@ Image source, Atkins LLC,  China.",,architecture,hotel and green park
 48,,,,Responsive Facade System,responsive-facade,Published in IJAC journal and CAADRIA conference 2012,Published as full paper in IJAAC journal and CAADRIA conference 2012,"Category==Responsive surfaces | Intelligent Facades | Interactive tangible systems==Client== Graduate work (under Prof. Jenny Sabin and Dr. Peter Lloyd Jones), Upenn, USA==Status==Published research==Year==2012",16,"The fundamental processes in living systems can be a potential resource to derive nonlinear relationships that could find application in the design of responsive surface from an architectural standpoint. This research focuses on deriving a parametric relationship from a phenomenon in cell biology to generate an architectural expression of responsive surface/facade. It further delineates the dynamic feedback mechanism from the environment and user as control factors. Through extensive investigation of cell-to-cell connections in the mammary epithelial cells and review of evident relay of communication across the entire system of cells, we could unfold the logical parameters of the biological system. Parametric modelling indicating the causality of the surface condition, changes with the change in extracellular matrix. This gives an opportunity to manoeuvre the surface parameters, contrary to the involuntary cell environment where the behaviours are under the control of a physiological process. Architecturally, the dynamic relationship of surface in a hybridised model, explains that interactivity is not a mere one to one response to a stimulus. Evidently, this interactive process can be a sophisticated loop of feedback through different materiality and componentry that play their effects (and are played back) by active surfaces.",,architecture,intelligent membranes
 49,,,,JAD Korea Extended Space,jad-korea-vision,,,"Category==Kinetic spaces | Intelligent structures | Extensible architecture==Client== JAD Trust Agency, South Korea==Status==Design Entry==Year==2011",16,"Offices grow over time, but the spaces they rent, stay the same (in terms of size). People need more space to accomodate their work force. This project is a proposal to extend floor spaces in existing office buildings to give people an opportunity to extend habitable spaces to interact, work and live. Using L system algorithms and kinetic architecture concepts, we visualized a futuristic temporary shelter that can be cantilevered from existing office buildings  to allow extra square footage for developers or existing tenants.",,design,kinetic architecture
 50,no,,,M-House,m-house,,,Category==Kinetic spaces | Modular structure | Extensible spaces==Client== Confidential==Status==Design Entry==Year==2010,16,"Vision for a kinetic house, which can be spatially organized based on the requirements of the user.",,architecture,extensible house
-51,,,,Manhatten Prefab Houses,manhatten-prefabs,,,Category==Rooftop Architecture | Prefabricated structure | Modular==Client== With ArX New York under Frederic Levrat==Status==Design Development==Year==2010,16,Vision and a design proposal for a set of prefabricated rooftop apartments as modular units.,,architecture,prefabricated house
+51,no,,,Manhatten Prefab Houses,manhatten-prefabs,,,Category==Rooftop Architecture | Prefabricated structure | Modular==Client== With ArX New York under Frederic Levrat==Status==Design Development==Year==2010,16,Vision and a design proposal for a set of prefabricated rooftop apartments as modular units.,,architecture,prefabricated house
 52,no,,featured,Piknik Recipe Making Game,piknik-recipe,,,"Category==Gaming Device | Product design | Kids toys==Client== Georgia Tech, USA==Status==Protoyping and User study==Year==2014",16,"Through research, we observed that parents often are troubled when they go grocery shopping with their children. Kids become bored and irritated in these public places and they throw tantrums. This irritation  wears down parents, and creates an undesirable experience for both the parent and the child. <br><br>
 
  In order to alleviate users' shopping experience, our goal was to create an engaging experience for children who visit grocery stores with their parents,. We brainstormed ten initial designs as a starting point for getting to a potential solution. Out of these, we narrowed down to three strong candidates whichseemed promising. We investigated each design from angles of cognitive, social, economical, anthropomorphic, and technological feasibility. From feedback and further refinement, we arrived at a final design - PIKNIK. Our idea was to design and prototype a recipe creation game. This application would be loaded on a colorful, ergonomic tablet, provided by the grocery store to empower kids to become a virtual chef. The tablets' interface would allow kids to scan grocery products from the store, view nutritional aspects of those products, and using these ingredients engage them in the shopping experience while they make their recipe. We set out to prototype this idea and further gather user feedback through evaluation.  We prototyped our game on a tablet, and conducted user studies with kids between the age of 4-10. While both kids and their parents loved our idea and the initiative,  we identified  several usability issues in our initial prototype. Based on the feedback. we finally refined our prototype to develop the final version of the game.",https://youtu.be/GcehRcfxqaU,design,kids
@@ -274,3 +274,44 @@ spaces . The ground element or the landscape also gives community facilities lik
 zones. The units are developed with component intelligence. These components fit in each other after morphing in to a perfect structural
 element or a facade element, with a gradual variation such that they form an integral part of the system.",,architecture,parametric tectonics
 80,,,,Complex pattern,complex-patterns,,,"Category==Facade design | 3D patterning | Smart geometries==Client==Upenn Graduate Work, USA==Status==Masters' project==Year==2010",16,Smart geometry modeling and aggregation research studies to build intriguing patterns for facade systems.,,design,facade design
+81,,,,Citizens' Affect from Tweets,affect-in-cities,,Presented at the ACSP 2019 Conference,"Category==Participatory design | Citizens' Affect Analysis | Opinion Mining==Client==PHD Research, Georgia Tech USA==Status==On-going Research==Year==2016-Current",16,"Cities are associated with higher rates
+of most mental health problems. Urban Planners can encourage
+designing urban spaces conducive to
+peoples' mental wellbeing. It has been studied that certain
+urban spaces, are responsible for
+mental wellbeing more than others. In this work, we predict 'urban activity' through linguistic analysis of Tweet text
+We also understand 'where' people express more positive affect while
+engaging in various urban activities.",,urban-planning,text modeling
+82,,,,Unveiling Urban Stress using Tweets,urban-stress-from-tweets,,Presented at the ACSP 2020 Conference,"Category==Participatory design | Citizens' Affect Analysis | Opinion Mining==Client==PHD Research, Georgia Tech USA==Status==On-going Research==Year==2016-Current",16,"Stress is a psychological reaction of
+individuals when they perceive the
+environmental demand exceeds their
+adaptive capacity. We hypothize that people are
+less stressed in
+areas with a higher degree of
+urbaneness. From neural netwok based modeling text data we found that people engage in de
+stress activities in
+neighborhoods with higher
+urban score.
+i.e. neighborhoods with higher
+building density , smaller block
+sizes, higher proportion of
+gridded streets, and high land
+use diversity. The output of this research can be useful in the
+development of audit tool / check list for planners and
+designers. It can provide cues for
+public awareness and it aims to
+encourage reduction in the mental health cost in cities
+through investment in public amenities.",,urban-planning,quantifying urban stress
+83,,,,Social media mining during calamity,i85-bridge-collapse-study,,Presented at the ACSP 2018 Conference,"Category==Participatory design | Citizens' Affect Analysis | Opinion Mining==Client==PHD Research, Georgia Tech USA==Status==On-going Research==Year==2016-Current",16,"A portion of the I-85 bridge in Atlanta, GA, USA (92FT) collapsed on 30th March 2017, leaving North and South bound traffic through GA disrupted. This research answered questions such as: (1) How did the collapse affect people?
+(2) Were they more stressed than usual
+during that period? (3) What were their coping mechanisms? (4) Were there differences in the
+sentiments expressed by locals vs. those from other areas? The findings emphasize the
+necessity of alternative transportation infrastructure to efficiently reroute traffic both local and from other areas going through
+Atlanta when a major interstate is dysfunctional. Bike paths and street design conducive to safe biking is a necessity to deal with
+travel disruptions. Social media analysis allows planners and policy makers to gauge people’s
+experience during crisis. Reduce cost and time for analysis. The analysis captures specific nuances such as
+people's perception and
+preference during a crisis incident. This is often overlooked when dealing with
+only traffic data. Most findings matched with the results available from traffic data . As such
+social media can be considered a reliable source of data when used as an
+alternative to enrich the finding of a crisis event.",,urban-planning,large scale historic text analysis
