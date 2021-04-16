@@ -39,7 +39,7 @@
     //CHANGES BACKGROUND OF HERO SECTION
     change_background_url() {
       let counter = 0
-      let name_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      let name_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
       let shuf_arr = this.shuffle_arr(name_arr)
       let interval = setInterval(function () {
         let wid = document.documentElement.clientWidth
