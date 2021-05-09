@@ -57,7 +57,7 @@
 
 
     // CREATES THE NAVBAR 
-    create_thumbnails(data) {
+    create_thumbnails(data, config = {}) {
 
       let thumbnails_str = ''
       let categories = []
@@ -68,6 +68,7 @@
         let category = d['proj_category_class']
         let recog_title = d['proj_subtitle']
         let cat_featured = d['proj_featured']
+        
         if (categories.indexOf(category) == -1) categories.push(category)
 
         let star_proj = ''
@@ -78,7 +79,7 @@
         let img_str = `<img src="assets/img/projects/${folder}/b_1.jpg" class="img-fluid img_thumbs" alt="" data-gallery="portfolioGallery">`
         // img_str = ''
         thumbnails_str += `
-                <div class="col-lg-4 col-md-6 portfolio-item filter-${category} filter-${cat_featured} portfolio_container_self" id = "portfolio_container_self" >
+                <div class="col-lg-4 col-md-6 portfolio-item filter-${category}-${config['title_name']} filter-${cat_featured} portfolio_container_self" id = "portfolio_container_self" >
                 <a href="./projects/${folder}.html" data-gallery="portfolioGallery"
                         title="Zoom thumbnail" class="portfolio-lightbox" title="${title}">
                         ${star_proj}
@@ -105,30 +106,33 @@
       // category_list += `<li data-filter=".filter-featured" class="filter-active li-featured">Featured</li>`
 
       categories.map((c) => {
-        category_list += `<li data-filter=".filter-${c}" class="li-${c}">${c}</li>`
+        category_list += `<li data-filter=".filter-${c}-${config['title_name']}" class="li-${c}">${c}</li>`
       })
 
       // category_list += `<li data-filter=".filter-app">App</li>`
-
-
+      let addon_class = ''
+      if(config['header_show'] == false) {
+        category_list = ''
+        addon_class = '-research'
+      } 
 
       let thumb_str = `
             <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-              <h2>Work</h2>
+              <h2>${config['title_name']}</h2>
               <p></p>
             </div>
     
             <div class="row">
               <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                <ul id="portfolio-flters">
-                  ${category_list}
+                <ul id="portfolio-flters${addon_class}">
+                 ${category_list}
                 </ul>
               </div>
             </div>
     
-            <div class="row portfolio-container main_thumbnail_container" data-aos="fade-up" data-aos-delay="200">  
+            <div class="row portfolio-container${addon_class} main_thumbnail_container" data-aos="fade-up" data-aos-delay="200">  
                 ${thumbnails_str}
               </div>
             </div>
@@ -136,49 +140,51 @@
             `
 
 
-      let selector = document.getElementsByClassName('main_portfolio_section')[0]
+      let selector = document.getElementsByClassName(config['classname_selector'])[0]
       selector.innerHTML = thumb_str
 
       console.log(' THUMBAS ADDED SUCCESFULLY ')
 
+      //COMMENTED THE FOLLOWING TO ADD DESIGN THUMBNAILS
+
       // setTimeout(() => {
 
       // }, 20);
-      let WINDOWS_ONLOAD = false
-      setTimeout(() => {
-        if (WINDOWS_ONLOAD == false) {
-          this.initiate_filter_listener()
-          var someLink = document.querySelector('.li-featured');
-          someLink.click();
-          console.log(' set time out set out ')
-        }
-      }, 2000);
+      // let WINDOWS_ONLOAD = false
+      // setTimeout(() => {
+      //   if (WINDOWS_ONLOAD == false) {
+      //     this.initiate_filter_listener()
+      //     var someLink = document.querySelector('.li-featured');
+      //     someLink.click();
+      //     console.log(' set time out set out ')
+      //   }
+      // }, 2000);
 
-      selector = document.querySelector('.work-anchor')
-      selector.addEventListener('click', (event) => {
-        //...
-        console.log(' clicked work ')
-        this.initiate_filter_listener();
-        let cat_class = window.localStorage.lastpage
-        if (cat_class == 'undefined') cat_class = 'featured'
-        let selector = `.li-${cat_class}`
-        var someLink = document.querySelector(selector);
-        someLink.click();
-      })
+      // selector = document.querySelector('.work-anchor')
+      // selector.addEventListener('click', (event) => {
+      //   //...
+      //   console.log(' clicked work ')
+      //   this.initiate_filter_listener();
+      //   let cat_class = window.localStorage.lastpage
+      //   if (cat_class == 'undefined') cat_class = 'featured'
+      //   let selector = `.li-${cat_class}`
+      //   var someLink = document.querySelector(selector);
+      //   someLink.click();
+      // })
 
 
-      window.addEventListener('load', () => {
-        console.log(' WINDOW LOADED GO ....')
-        this.initiate_filter_listener();
-        let cat_class = window.localStorage.lastpage //window.categoryclicked
-        if (cat_class == 'undefined') cat_class = 'featured'
-        let selector = `.li-${cat_class}`
-        var someLink = document.querySelector(selector);
-        someLink.click();
-        WINDOWS_ONLOAD = true;
-      })
+      // window.addEventListener('load', () => {
+      //   console.log(' WINDOW LOADED GO ....')
+      //   this.initiate_filter_listener();
+      //   let cat_class = window.localStorage.lastpage //window.categoryclicked
+      //   if (cat_class == 'undefined') cat_class = 'featured'
+      //   let selector = `.li-${cat_class}`
+      //   var someLink = document.querySelector(selector);
+      //   someLink.click();
+      //   WINDOWS_ONLOAD = true;
+      // })
 
-      // this.initiate_filter_listener();
+      this.initiate_filter_listener();
 
     } // create thumbnail ends
 
@@ -225,7 +231,8 @@
 
         let portfolioFilters = select('#portfolio-flters li', true);
 
-        on('click', '#portfolio-flters li', function (e) {
+        on('click', '#portfolio-flters li', function (e) { // changed to flters
+
 
           e.preventDefault();
           portfolioFilters.forEach(function (el) {
@@ -234,13 +241,16 @@
           this.classList.add('filter-active');
 
           let data_filtername = this.getAttribute('data-filter')
-          let arr_splitted = data_filtername.split('-')
-          window.localStorage.lastpage = arr_splitted[arr_splitted.length - 1]
+          console.log(' filter cliecked ', e, data_filtername)
+
+          // let arr_splitted = data_filtername.split('-')
+          // window.localStorage.lastpage = arr_splitted[arr_splitted.length - 1]
 
           portfolioIsotope.arrange({
             filter: this.getAttribute('data-filter')
           });
           portfolioIsotope.on('arrangeComplete', function () {
+            console.log(' arrange complete ', AOS)
             AOS.refresh()
           });
         }, true);
@@ -407,10 +417,10 @@
   mp.change_background_url()
 
   d3.csv('./../assets/img/projects_directory.csv', function (error, data) {
-    if (window.localStorage.updatedonce == 'undefined') {
-      window.localStorage.lastpage = 'featured'
-      window.localStorage.updatedonce = true;
-    }
+    // if (window.localStorage.updatedonce == 'undefined') {
+    //   window.localStorage.lastpage = 'featured'
+    //   window.localStorage.updatedonce = true;
+    // }
     if (error) console.log('error is ', error)
     console.log(' within thumbnails ', data)
 
@@ -419,7 +429,34 @@
       if (d['proj_show'] == 'no') return false;
       else return true
     })
-    mp.create_thumbnails(data)
+
+    let data_planning = data.filter((d) => {
+      return (d['proj_category_class'] == 'urban-planning' || d['proj_category_class'] == 'urban-designs')
+    })
+
+    let data_other= data.filter((d) => {
+      return !(d['proj_category_class'] == 'urban-planning' || d['proj_category_class'] == 'urban-designs')
+    })
+
+    setTimeout(() => {
+      var config = {
+        'classname_selector' : 'main_portfolio_section_designworks',
+        'title_name' : 'Designs',
+        'header_show' : true
+      }
+      mp.create_thumbnails(data_other, config)
+    }, 0);
+    
+
+    var config = {
+      'classname_selector' : 'main_portfolio_section',
+      'title_name' : 'Research',
+      'header_show' : false
+    }
+
+    mp.create_thumbnails(data_planning, config)
+
+   
 
     aw = new AwardsContent();
     aw.make_header(data)
