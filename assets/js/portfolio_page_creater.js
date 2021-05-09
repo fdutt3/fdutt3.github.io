@@ -56,7 +56,7 @@
                 <nav class="navbar navbar-light bg-light" id= "navbar-full" >
                 <div class="container">
                     <div class="header_navbar"><a class="navbar-brand" href="./../index.html#work">
-                            <h3>Florina Dutts' portfolio </h3>
+                            <h3>F. Dutts' work </h3>
                         </a>
                     </div>
                     <div class="buttons_portfolio">
@@ -451,6 +451,7 @@
             let num_other_works = 0
             let added_proj_dict = {}
             data.map((d, i) => {
+                if(i > 8) return
 
                 if (d['proj_category_class'] != this.projcategory) {
 
